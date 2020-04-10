@@ -1,4 +1,6 @@
-# Surprising Geometrical Constructions
+# constructions
+
+Surprising Geometrical Constructions
 
 This repository contains the LaTeX source for this document which is available on https://unglue.it/.
 
