@@ -1,0 +1,83 @@
+% !TeX root = constructions.tex
+
+\thispagestyle{empty}
+
+\begin{center}
+\textbf{\LARGE Surprising Geometric Constructions}
+
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+
+\textbf{\Large Moti Ben-Ari}
+
+\bigskip
+\bigskip
+
+\url{http://www.weizmann.ac.il/sci-tea/benari/}
+\end{center}
+\vfill
+
+\begin{footnotesize}
+\begin{center}
+\copyright{}\ 2019--20 by Moti Ben-Ari.
+\end{center}
+
+This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. To view a copy of this license, visit \url{http://creativecommons.org/licenses/by-nc-sa/3.0/} or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+\end{footnotesize}
+
+\bigskip
+
+\begin{center}
+\includegraphics[width=.15\textwidth]{by-nc-sa.png}
+\end{center}
+
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+\thispagestyle{empty}
+
+\tableofcontents
+\newpage
+\mbox{}
+\newpage
+
+
+\chapter{Introduction}
+
+Geometric constructions are fundamental to Euclidean geometry and appear in secondary-school textbooks \cite{geometry}. Most students of mathematics will also know the three problems posed by the Greeks---trisecting angle, squaring a circle and doubling a cube---for which a construction is impossible. There are many interesting and surprising geometrical constructions that are probably unknown to almost all students and teachers. This document presents these constructions in great detail using only secondary-school mathematics.
+
+The \LaTeX{} source can be found at \url{https://github.com/motib/constructions}.
+
+Part~\ref{p.sec} presents constructions with the familiar straightedge and compass, as well as constructions known to the Greeks that use extensions of the straightedge and compass. In recent years, the art of origami---paper folding---has been given a mathematical formalization as described in Part~\ref{p.origami}. It may come as a surprise that constructions with origami are more powerful than constructions with straightedge and compass.
+
+\section{Constructions with straightedge and compass}
+
+\begin{description}
+\item[Chapeter \ref{c.collapse}, the collapsing compass] The modern compass is a fixed compass that maintains the distance between its legs when lifted off the paper. It can be used to construct a line segment of the same length as a given segment. The compass used in the ancient world was a ``collapsing compass'' that does not maintain the distance between its legs when lifted from the paper. Euclid showed that any construction that can be done with a fixed compass can be done with a collapsing compass. Numerous incorrect proofs have been given based on incorrect diagrams \cite{toussaint}. In order to emphasize that a proof must not depend on a diagram, I ``prove'' that \emph{every} triangle is isoceles.
+
+\item[Chapter \ref{c.trisect}, trisecting an angle] Trisecting an arbitrary angle is impossible, but the Greeks knew that any angle can be trisected using extensions of the straightedge and compass. This chapter presents three such constructions, two of which are easy, while the third requires some knowledge of trigonometry and limits.
+
+\item[Chapter \ref{c.squaring}, squaring a circle] To square a circle requires the construction ofa line segment of length $\pi$. This chapter presents three constructions of approximations to $\pi$, one by Adam Kochansky and two by Ramanujan.
+
+\item[Chapter \ref{c.compass-only}, construction with only a compass] Are both a straightedge and a compass are needed? Lorenzo Mascheroni and Georg Mohr showed that a compass only is sufficient. 
+
+\item[Chapter \ref{c.straightedge} ,construction with only a straightedge] Is a straightedge sufficient? The answer is no because a straightedge can ``compute'' only linear functions, whereas a compass can ``compute'' quadratic functions. Jacob Steiner proved that a straightedge is sufficient provided that somewhere in the plane a single circle exists. 
+\end{description}
+
+\section{Constructions with origami}
+
+\begin{description}
+\item[Chapter~\ref{c.axioms}, the axioms of origami] The seven axioms of origami can be formalized in mathematics. This chapters derives formulas for the axioms, together with numerical examples.
+
+\item[Chapter~\ref{c.trisection}, trisecting an angle] Two methods for trisecting an angle with origami are given.
+
+\item[Chapter~\ref{c.cube}, doubling a cube] Two methods for doubling a cube with origami are given.
+
+\item[Chapter~\ref{c.lill}, finding roots] This chapter explains Eduard Lill's geometric method for finding real roots of any polynomial (actually, verifying that a value is a root). We demonstrate the method for cubic polynomials.
+
+\item[Chapter~\ref{c.beloch}, constructing a cube root] Margharita P. Beloch's published an implementation of Lill's method that can find a root of a cubic polynomial with one fold.
+
+\end{description}

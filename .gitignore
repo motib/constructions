@@ -1,0 +1,12 @@
+﻿tikz/*
+*.pdf
+*.bat
+*.zip
+*~
+*.aux
+*.log
+*.auxlock
+*.bbl
+*.blg
+*.synctex.gz
+*.toc
