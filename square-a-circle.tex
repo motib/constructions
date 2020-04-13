@@ -4,31 +4,6 @@
 
 \section{Approximations to $\pi$}\label{s.square-intro}
 
-In the nineteenth century it was proved that three constructions are impossible with straightedge and compass: trisecting an angle, duplicating a cube and squaring a circle. Given a line segment defined to have length $1$, the constructible numbers (lengths) are those obtainable from that line segment using the operators $+,-,\times,/,\surd$.
-
-In the constructions in this chapter we need to divide a line segment into three parts; here we show how the division of two lengths can be constructed. Given a line segment of length $1$ and line segments of lengths $a,b$, by similar triangles $1/b=\overline{OD}/a$ so $\overline{OD}=a/b$.
-
-\begin{center}
-\begin{tikzpicture}
-%\clip (-.6,-1) rectangle (4,3);
-\draw[name path=horz] (0,0) coordinate (o) -- (7,0);
-\fill (o) circle(1.5pt) node[left] {$O$};
-\fill (6,0) circle(1.5pt) coordinate (a) node[below] {$A$};
-\draw (0,0) -- (30:5.5);
-\fill (30:3) circle(1.5pt) coordinate (c) node[above] {$C$};
-\fill (30:5) circle(1.5pt) coordinate (b) node[above] {$B$};
-\draw (a) -- (b);
-\path[name path=par] (c) -- +($(a)-(b)$);
-\path[name intersections={of=par and horz,by=d}];
-\fill (d) circle(1.5pt) node[below] {$D$};
-\draw (c) -- (d);
-\draw[<->] (-.4,.5) -- node[fill=white] {$b$} +(30:5.2);
-\path (o) -- node[above] {$1$} (c);
-\draw[<->] (0,-.8) -- node[fill=white] {$a$} +(6,0);
-\path (o) -- node[below] {$a/b$} (d);
-\end{tikzpicture}
-\end{center}
-
 To square a circle the length $\sqrt{\pi}$ must be constructed, however, $\pi$ is \emph{transcendental}, meaning that it is not the solution of any algebraic equation.
 
 This chapter brings three constructions of approximations to $\pi$. The following table shows the formulas of the lengths that are constructed, their approximate values, the difference between these values and the value of $\pi$, and the error in meters that results if the approximation is used to compute the circumference of the earth given that its radius is $6378$ km.
@@ -49,6 +24,33 @@ This chapter brings three constructions of approximations to $\pi$. The followin
 Kochansky's construction from $1685$ can be found in \cite{bold}.
 
 Ramanujan's constructions from $1913$ can be found in \cite{ramanujan1,ramanujan2}.
+
+In the constructions in this chapter we need to divide a line segment into three parts; here we show how the division of two lengths can be constructed. Given a line segment of length $1$ and line segments of lengths $a,b$, by similar triangles:
+\[
+\disfrac{1}{b}=\disfrac{\overline{OD}}{a}\,,
+\]
+so $\overline{OD}=\disfrac{a}{b}$.
+
+\begin{center}
+\begin{tikzpicture}[scale=1.1]
+%\clip (-.6,-1) rectangle (4,3);
+\draw[name path=horz] (0,0) coordinate (o) -- (7,0);
+\fill (o) circle(1.5pt) node[left] {$O$};
+\fill (6,0) circle(1.5pt) coordinate (a) node[below] {$A$};
+\draw (0,0) -- (30:5.5);
+\fill (30:3) circle(1.5pt) coordinate (c) node[above] {$C$};
+\fill (30:5) circle(1.5pt) coordinate (b) node[above] {$B$};
+\draw (a) -- (b);
+\path[name path=par] (c) -- +($(a)-(b)$);
+\path[name intersections={of=par and horz,by=d}];
+\fill (d) circle(1.5pt) node[below] {$D$};
+\draw (c) -- (d);
+\draw[<->] (-.4,.5) -- node[fill=white] {$b$} +(30:5.2);
+\path (o) -- node[above] {$1$} (c);
+\draw[<->] (0,-.8) -- node[fill=white] {$a$} +(6,0);
+\path (o) -- node[below] {$a/b$} (d);
+\end{tikzpicture}
+\end{center}
 
 \newpage
 
@@ -73,7 +75,7 @@ Construct $\overline{BH}$.
 
 Claim: $\overline{BH}=\sqrt{\disfrac{40}{3}-2\sqrt{3}}\approx \pi$.
 \begin{center}
-\begin{tikzpicture}[scale=1]
+\begin{tikzpicture}[scale=.9]
 % Scale at 4
 
 % Coordinates of circle
@@ -86,26 +88,26 @@ Claim: $\overline{BH}=\sqrt{\disfrac{40}{3}-2\sqrt{3}}\approx \pi$.
 \draw (A) rectangle +(12pt,12pt);
 
 % Draw circle and diameter
-\node [thick,draw,circle through=(A),name path=circle] at (O) {};
-\draw [thick] (A) -- (B);
+\node [draw,circle through=(A),name path=circle] at (O) {};
+\draw (A) --  node[right] {$1$} (O) -- node[right] {$1$} (B);
 
 % Draw tangent at A
-\draw[thick,name path=tangent] ($(A)+(-4.5,0)$) -- ($(A)+(10.5,0)$);
+\draw[name path=tangent] ($(A)+(-4.5,0)$) -- ($(A)+(10.5,0)$);
 
 % Draw arc centered at A which intersects circle at C
-\draw[thick,name path=Aarc] (O)
+\draw[name path=Aarc] (O)
    arc [start angle=90,end angle=220,radius=4];
 \path[name intersections={of=circle and Aarc,by=C}];
 \fill (C) circle(2pt) node[left,xshift=-4pt] {$C$};
 
 % Draw arc centered at C which intersects the first arc at D
-\draw[thick,name path=Carc] ($(C)+(260:4)$)
+\draw[name path=Carc] ($(C)+(260:4)$)
    arc [start angle=260,end angle=280,radius=4];
 \path[name intersections={of=Carc and Aarc,by=D}];
 \fill (D) circle(2pt) node[below left] {$D$};
 
 % Draw O--D which intersects the tangent at E
-\draw[thick,name path=OD] (O) -- (D);
+\draw[name path=OD] (O) -- (D);
 \path[name intersections={of=tangent and OD,by=E}];
 \fill (E) circle(2pt) node[above left] {$E$};
 
@@ -118,7 +120,12 @@ Claim: $\overline{BH}=\sqrt{\disfrac{40}{3}-2\sqrt{3}}\approx \pi$.
 \fill (H) circle(2pt) node[above] {$H$};
 
 % Draw BH of length approximately pi
-\draw[thick] (B) -- (H);
+\draw (B) -- (H);
+
+\draw[<->] ($(E)+(0,-.8)$) -- node[fill=white] {$1$} ($(F)+(0,-.8)$);
+\draw[<->] ($(F)+(0,-.8)$) -- node[fill=white] {$1$} ($(G)+(0,-.8)$);
+\draw[<->] ($(G)+(0,-.8)$) -- node[fill=white] {$1$} ($(H)+(0,-.8)$);
+
 \end{tikzpicture}
 \end{center}
 
@@ -126,7 +133,7 @@ Claim: $\overline{BH}=\sqrt{\disfrac{40}{3}-2\sqrt{3}}\approx \pi$.
 
 \subsection{The proof}
 
-Extract the following diagram from the first one. Dashed line segments have been added. Since all the circles are unit circles, it is easy to see that the length of each dashed line segment is $1$. It follows that  $\overline{AOCD}$ is a rhombus so its diagonals are perpendicular to and bisect each other at $K$, so $\overline{AK}=\frac{1}{2}$.
+Extract the following diagram from the first one. Dashed line segments have been added. Since all the circles are unit circles, it is easy to see that the length of each dashed line segment is $1$. It follows that  $\overline{AOCD}$ is a rhombus so its diagonals are perpendicular to and bisect each other at $K$ and $\overline{AK}=\frac{1}{2}$.
 \begin{center}
 \begin{tikzpicture}[scale=1.25]
 % Scale at 4
@@ -142,21 +149,21 @@ Extract the following diagram from the first one. Dashed line segments have been
 \draw ($(O)+(200:4)$) arc [start angle=200,end angle=280,radius=4];
 
 % Draw tangent at A
-\draw[thick,name path=tangent] ($(A)+(-4.5,0)$) -- ($(A)+(10.5,0)$);
+\draw[name path=tangent] ($(A)+(-4.5,0)$) -- ($(A)+(10.5,0)$);
 \draw (A) rectangle +(6pt,6pt);
 
 % Draw arc centered at O which intersects circle at C
-\draw[thin,name path=Aarc] (O)
+\draw[name path=Aarc] (O)
    arc [start angle=90,end angle=220,radius=4];
 \path[name intersections={of=circle and Aarc,by=C}];
 
 % Draw arc centered at C which intersects the first arc at D
-\draw[thin,name path=Carc] ($(C)+(260:4)$)
+\draw[name path=Carc] ($(C)+(260:4)$)
    arc [start angle=260,end angle=280,radius=4];
 \path[name intersections={of=Carc and Aarc,by=D}];
 
 % Draw O--D which intersects the tangent at E
-\draw[thick,name path=OD] (O) -- (D);
+\draw[name path=OD] (O) -- (D);
 \path[name intersections={of=tangent and OD,by=E}];
 
 % Find point H at length 3 from E
@@ -165,19 +172,19 @@ Extract the following diagram from the first one. Dashed line segments have been
 \coordinate (H) at ($(G)+(4,0)$);
 
 % Draw BH of length approximately pi
-\draw[thick] (B) -- (H);
+\draw (B) -- (H);
 
-\draw[ultra thick,dashed] (A) -- (O) -- (C) -- (D) -- cycle;
-\draw[ultra thick,dashed,name path=AC] (A) -- (C);
+\draw[very thick,dashed] (A) -- (O) -- (C) -- (D) -- cycle;
+\draw[very thick,dashed,name path=AC] (A) -- (C);
 
 \node[above left,yshift=10pt,xshift=2pt] at (A) {$60^\circ$};
 \node[left,yshift=10pt,xshift=-20pt] at (A) {$30^\circ$};
 
 \path[name intersections={of=AC and OD,by=K}];
-\draw[thick,rotate=-30] (K) rectangle +(6pt,6pt);
+\draw[rotate=-30] (K) rectangle +(6pt,6pt);
 
 \path (A) -- node[above,xshift=2pt,yshift=2pt] {$1/2$} (K);
-\path (A) -- node[below,xshift=-4pt] {$1/\sqrt{3}$} (E);
+\path (A) -- node[below,xshift=-10pt] {$1/\sqrt{3}$} (E);
 
 \fill (O) circle(1.25pt) node[above right] {$O$};
 \fill (A) circle(1.25pt) node[below right] {$A$};
@@ -209,7 +216,7 @@ Returning to the first diagram, we see that $\triangle ABH$ is a right triangle:
 \begin{array}{lcl}
 \overline{BH}^2&=&\overline{OB}^2+\overline{AH}^2\\
 &=&4+\disfrac{9\cdot 3 -6\sqrt{3}+1}{3}=\disfrac{40}{3}-2\sqrt{3}\\
-\overline{BH}&=&\sqrt{\disfrac{40}{3}-2\sqrt{3}}\approx 3.141533387=\approx \pi\,.
+\overline{BH}&=&\sqrt{\disfrac{40}{3}-2\sqrt{3}}\approx 3.141533387\approx \pi\,.
 \end{array}
 \end{displaymath}
 
@@ -235,7 +242,7 @@ Construct a chord $\overline{RS}=\overline{QT}$.
 
 Construct $\overline{PS}$.
 
-Construct a line parallel to $RS$ from $T$ that intersects $\overline{PS}$ at $N$.
+Construct a line parallel to $\overline{RS}$ from $T$ that intersects $\overline{PS}$ at $N$.
 
 Construct a line parallel to $\overline{RS}$ from $O$ that intersects $\overline{PS}$ at $M$.
 
@@ -249,7 +256,7 @@ Find point $C$ such that $\overline{RC}$ is equal to $\overline{RH}$.
 
 Construct $\overline{CD}$ parallel to $\overline{KL}$ that intersects $\overline{LR}$ at $D$. 
 
-Claim: $\overline{RD}^2=\disfrac{355}{113}\approx pi$.
+Claim: $\overline{RD}^2=\disfrac{355}{113}\approx \pi$.
 
 
 \begin{center}
@@ -318,6 +325,7 @@ Claim: $\overline{RD}^2=\disfrac{355}{113}\approx pi$.
 
 \draw[rotate=90] (t) rectangle +(8pt,8pt);
 \draw[rotate=-160] (s) rectangle +(8pt,8pt);
+\draw[rotate=28] (k) rectangle +(8pt,8pt);
 \end{tikzpicture}
 \end{center}
 
@@ -337,7 +345,8 @@ $\triangle MPO\sim \triangle SPR$ so:
 \begin{form}{2.2}
 \disfrac{\overline{PM}}{\overline{PO}}&=&\disfrac{\overline{PS}}{\overline{PR}}\\
 \disfrac{\overline{PM}}{1}&=&\disfrac{\sqrt{31}/3}{2}\\
-\overline{PM}&=&\disfrac{\sqrt{31}}{6}\,.
+\overline{PM}&=&\disfrac{\sqrt{31}}{6}\\
+\overline{PK}&=&\overline{PM}=\disfrac{\sqrt{31}}{6}\,.
 \end{form}
 $\triangle NPT\sim \triangle SPR$ so:
 
@@ -345,8 +354,8 @@ $\triangle NPT\sim \triangle SPR$ so:
 \disfrac{\overline{PN}}{\overline{PT}}&=&\disfrac{\overline{PS}}{\overline{PR}}\\
 \disfrac{\overline{PN}}{5/3}&=&\disfrac{\sqrt{31}/3}{2}\\
 \overline{PN}&=&\disfrac{5\sqrt{31}}{18}\\
-\overline{MN}&=&\overline{PN}-\overline{PM}\\
-&=&\sqrt{31}\left(\disfrac{5}{18}-\disfrac{1}{6}\right) = \disfrac{\sqrt{31}}{9}\,.
+\overline{MN}&=&\overline{PN}-\overline{PM}=\sqrt{31}\left(\disfrac{5}{18}-\disfrac{1}{6}\right) = \disfrac{\sqrt{31}}{9}\\
+\overline{PL}&=&\overline{MN}=\disfrac{\sqrt{31}}{9}\,.
 \end{form}
 
 $\triangle PKR$ is a right triangle because it subtends a diameter. By Pythagoras's theorem:
@@ -423,6 +432,8 @@ Here is the construction with line segments labeled with their lengths:
 %\path (r) -- node[above,xshift=-40pt,yshift=-8pt] {$RD=\sqrt{355/113}$\\$RL=\sqrt{355}/9$} (d);
 \path (r) -- node[above,xshift=-40pt,yshift=-4pt] {$\overline{RD}=\sqrt{355/113}$} (d);
 \path (r) -- node[below,xshift=-28pt,yshift=-15pt] {$\overline{RL}=\sqrt{355}/9$} (l);
+\draw[rotate=28] (k) rectangle +(8pt,8pt);
+\draw[rotate=-160] (s) rectangle +(8pt,8pt);
 \end{tikzpicture}
 \end{center}
 
@@ -542,14 +553,14 @@ Similarly, we use the law of cosines on $\triangle MBA$ to compute $\overline{AM
 \overline{AM}&=&\sqrt{\disfrac{19}{9}}\,.
 \end{form}
 
-By construction $\overline{QP}\parallel \overline{MN}$ so
+By construction $\overline{QP}\| \overline{MN}$ so
 $\triangle MAN\sim \triangle QAP$, and by construction $\overline{AP}=\overline{AM}$ giving:
 \begin{form}{2.4}
 \disfrac{\overline{AQ}}{\overline{AM}}&=&\disfrac{\overline{AP}}{\overline{AN}}=\disfrac{\overline{AM}}{\overline{AN}}\\
 \overline{AQ}&=&\disfrac{\overline{AM}^2}{\overline{AN}}=\disfrac{19/9}{\sqrt{22/9}}=\disfrac{19}{3\sqrt{22}}\,.
 \end{form}
 
-By construction $\overline{TR}\parallel \overline{OQ}$ so
+By construction $\overline{TR}\| \overline{OQ}$ so
 $\triangle RAT\sim \triangle QAO$ giving:
 \begin{form}{2.4}
 \disfrac{\overline{AR}}{\overline{AQ}}&=&\disfrac{\overline{AT}}{\overline{AO}}\\

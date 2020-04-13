@@ -32,8 +32,8 @@ This construction is based upon the presentation in \cite{newton}. The second pr
 \coordinate (B) at (0,2.5);
 \draw [thick] (A) -- node[above,very near end] {$q$} +(10,0);
 \draw [thick] (B) -- node[above,very near end] {$r$} +(10,0);
-\fill (A) circle (2pt) node[left] {$A$};
-\fill (B) circle (2pt) node[left] {$B$};
+\fill (A) circle (1.5pt) node[left] {$A$};
+\fill (B) circle (1.5pt) node[left] {$B$};
 \path (Q) -- node[left] {$a$} (B) -- node[left] {$a$} (A);
 \draw (A) rectangle +(8pt,8pt);
 \draw (B) rectangle +(8pt,8pt);
@@ -46,10 +46,10 @@ This construction is based upon the presentation in \cite{newton}. The second pr
 \coordinate (AP) at (3.65,6.33);
 \coordinate (QP) at (6.87,2.5);
 \coordinate (BP) at (5.26,4.42);
-\fill (D) circle (2pt) node[left] {$D$};
-\fill (AP) circle (2pt) node[above,yshift=6pt] {$A'$};
-\fill (QP) circle (2pt) node[above,yshift=6pt] {$Q'$};
-\fill (BP) circle (2pt) node[above,xshift=2pt,yshift=2pt] {$B'$};
+\fill (D) circle (1.5pt) node[left] {$D$};
+\fill (AP) circle (1.5pt) node[above,yshift=6pt] {$A'$};
+\fill (QP) circle (1.5pt) node[above,yshift=6pt] {$Q'$};
+\fill (BP) circle (1.5pt) node[above,xshift=2pt,yshift=2pt] {$B'$};
 \draw [very thick,dashed] (D) -- node[left,near start] {$l$} (fold-x);
 
 % Draw line of reflections
@@ -80,9 +80,9 @@ Draw the lines $\overline{QB'}$ and $QQ'$. We claim that $\angle PQB'$, $\angle 
 \coordinate (P) at (60:10cm);
 \coordinate (Q) at (0,0);
 \coordinate (R) at (10,0);
-\fill (P) circle (2pt) node[below right] {$P$};
-\fill (Q) circle (2pt) node[left,xshift=-4pt] {$Q$};
-\fill (R) circle (2pt) node[right] {$R$};
+\fill (P) circle (1.5pt) node[below right] {$P$};
+\fill (Q) circle (1.5pt) node[left,xshift=-4pt] {$Q$};
+\fill (R) circle (1.5pt) node[right] {$R$};
 
 % Draw PQR
 \draw [very thick] (Q) -- (R);
@@ -95,8 +95,8 @@ Draw the lines $\overline{QB'}$ and $QQ'$. We claim that $\angle PQB'$, $\angle 
 \coordinate (B) at (0,2.5);
 \draw [thick] (A) -- node[above,very near end] {$q$} +(10,0);
 \draw [thick] (B) -- node[above,very near end] {$r$} +(10,0);
-\fill (A) circle (2pt) node[left,xshift=-4pt] {$A$};
-\fill (B) circle (2pt) node[left,xshift=-4pt] {$B$};
+\fill (A) circle (1.5pt) node[left,xshift=-4pt] {$A$};
+\fill (B) circle (1.5pt) node[left,xshift=-4pt] {$B$};
 \path (Q) -- node[left,xshift=-4pt] {$a$} (B) -- node[left,xshift=-4pt] {$a$} (A);
 \draw (A) rectangle +(8pt,8pt);
 \draw (B) rectangle +(8pt,8pt);
@@ -109,10 +109,10 @@ Draw the lines $\overline{QB'}$ and $QQ'$. We claim that $\angle PQB'$, $\angle 
 \coordinate (AP) at (3.65,6.33);
 \coordinate (QP) at (6.87,2.5);
 \coordinate (BP) at (5.26,4.42);
-\fill (D) circle (2pt) node[left] {$D$};
-\fill (AP) circle (2pt) node[above,yshift=6pt] {$A'$};
-\fill (QP) circle (2pt) node[above,xshift=2pt,yshift=6pt] {$Q'$};
-\fill (BP) circle (2pt) node[above,xshift=4pt,yshift=2pt] {$B'$};
+\fill (D) circle (1.5pt) node[left] {$D$};
+\fill (AP) circle (1.5pt) node[above,yshift=6pt] {$A'$};
+\fill (QP) circle (1.5pt) node[above,xshift=2pt,yshift=6pt] {$Q'$};
+\fill (BP) circle (1.5pt) node[above,xshift=4pt,yshift=2pt] {$B'$};
 \draw [very thick,dashed] (D) -- node[left,near start] {$l$} (fold-x);
 	
 % Draw line of reflections
@@ -148,7 +148,7 @@ By reflection, $\triangle AQ'Q\cong \triangle A'QQ'$.\footnote{The two triangles
 \begin{quote}
 The fold $l$ is the perpendicular bisector of both $\overline{AA'}$ and $\overline{QQ'}$; drop perpendiculars from $A$ and $A'$ to $\overline{QQ'}$; then $\overline{AQ}=\overline{A'Q'}$ follows by congruent right triangles. $\overline{AA'Q'Q}$ is an isoceles trapezoid so its diagonals are equal $\overline{AQ'}=\overline{A'Q}$.
 \end{quote}
-Therefore, $\overline{QB'}$, the reflection of $\overline{Q'B}$, is the perpendicular bisector of an isoceles triangle and $\angle A'QB'=\angle Q'QB'=\angle QQ'B=\alpha$.
+Therefore, $\overline{QB'}$, the reflection of $\overline{Q'B}$, is the perpendicular bisector of an isoceles triangle and $\angle A'QB'=\angle B'QQ'=\angle QQ'B=\angle Q'QR=\alpha$.
 
 
 \subsection{Second proof}
@@ -160,9 +160,9 @@ Therefore, $\overline{QB'}$, the reflection of $\overline{Q'B}$, is the perpendi
 \coordinate (P) at (60:10cm); %(5,8.67);
 \coordinate (Q) at (0,0);
 \coordinate (R) at (10,0);
-\fill (P) circle (2pt) node[below right] {$P$};
-\fill (Q) circle (2pt) node[left] {$Q$};
-\fill (R) circle (2pt) node[right] {$R$};
+\fill (P) circle (1.5pt) node[below right] {$P$};
+\fill (Q) circle (1.5pt) node[left] {$Q$};
+\fill (R) circle (1.5pt) node[right] {$R$};
 
 % Draw PQR
 \draw [very thick] (P)  -- (Q) -- (R);
@@ -175,8 +175,8 @@ Therefore, $\overline{QB'}$, the reflection of $\overline{Q'B}$, is the perpendi
 \coordinate (B) at (0,2.5);
 \draw [thick] (A) -- node[above,very near end] {$q$} +(10,0);
 \draw [thick] (B) -- node[above,very near end] {$r$} +(10,0);
-\fill (A) circle (2pt) node[left] {$A$};
-\fill (B) circle (2pt) node[left] {$B$};
+\fill (A) circle (1.5pt) node[left] {$A$};
+\fill (B) circle (1.5pt) node[left] {$B$};
 \path (Q) -- node[left] {$a$} (B) -- node[left] {$a$} (A);
 \draw (A) rectangle +(8pt,8pt);
 \draw (B) rectangle +(8pt,8pt);
@@ -189,10 +189,10 @@ Therefore, $\overline{QB'}$, the reflection of $\overline{Q'B}$, is the perpendi
 \coordinate (AP) at (3.65,6.33);
 \coordinate (QP) at (6.87,2.5);
 \coordinate (BP) at (5.26,4.42);
-\fill (D) circle (2pt) node[left] {$D$};
-\fill (AP) circle (2pt) node[above,yshift=6pt] {$A'$};
-\fill (QP) circle (2pt) node[above,yshift=6pt] {$Q'$};
-\fill (BP) circle (2pt) node[above,xshift=2pt,yshift=2pt] {$B'$};
+\fill (D) circle (1.5pt) node[left] {$D$};
+\fill (AP) circle (1.5pt) node[above,yshift=6pt] {$A'$};
+\fill (QP) circle (1.5pt) node[above,yshift=6pt] {$Q'$};
+\fill (BP) circle (1.5pt) node[above,xshift=2pt,yshift=2pt] {$B'$};
 \draw [very thick,dashed,name path=fold] (D) -- node[left,near start] {$l$} (fold-x);
 
 % Draw line of reflections
@@ -205,10 +205,10 @@ Therefore, $\overline{QB'}$, the reflection of $\overline{Q'B}$, is the perpendi
 % Draw indications of right angles
 \draw[rotate=-140] (BP) rectangle +(8pt,8pt);
 \path [name intersections = {of = fold and Qr, by = {U}}];
-\fill (U) circle (2pt) node[above left,xshift=-2pt,yshift=-2pt] {$U$};
+\fill (U) circle (1.5pt) node[above left,xshift=-2pt,yshift=-2pt] {$U$};
 \draw[rotate=20] (U) rectangle +(8pt,8pt);
 \path [name intersections = {of = fold and Qq, by = {V}}];
-\fill (V) circle (2pt) node[above left,xshift=-2pt,yshift=-2pt] {$V$};
+\fill (V) circle (1.5pt) node[above left,xshift=-2pt,yshift=-2pt] {$V$};
 
 \path (Q) -- node[below,near end] {$b$} (U);
 \path (U) -- node[below] {$b$} (QP);
@@ -345,4 +345,4 @@ $\triangle QMU\cong \triangle PMP'$ by angle-side-angle:  $\angle P'PM=\angle UQ
 
 $\triangle P'MQ'\cong \triangle UMQ'$ by side-angle-side: we have shown that $\overline{P'M}=\overline{MU}=b$; the angles at $M$ are right angles; $\overline{MQ'}$ is a common side. Since the altitude of the isoceles triangle $\triangle P'Q'U$ is the bisector of $\angle P'Q'U$, so $\angle P'Q'M=\angle UQ'M=\alpha$.
 
-$\triangle QWV\cong\triangle Q'WV$ by side-angle-side: $\overline{QV}=\overline{VQ'}=c$ and the angles at $V$ are right angles since the fold is the perpendicular bisector of $\overline{QQ'}$; $\overline{VW}$ is a common side. Therefore, $\angle WQV=\beta=\angle WQ'V=2\alpha$. By alternate interior angles $\angle Q'QR=\angle MQ'Q=\alpha$. We have $\angle PQR = \beta + \alpha = 2\alpha+\alpha=3\alpha$ so $\angle Q'QR$ is one-third of $\angle PQR$.
+$\triangle QWV\cong\triangle Q'WV$ by side-angle-side: $\overline{QV}=\overline{VQ'}=c$; the angles at $V$ are right angles since the fold is the perpendicular bisector of $\overline{QQ'}$; $\overline{VW}$ is a common side. Therefore, $\angle WQV=\beta=\angle WQ'V=2\alpha$. By alternate interior angles $\angle Q'QR=\angle MQ'Q=\alpha$. We have $\angle PQR = \beta + \alpha = 2\alpha+\alpha=3\alpha$ so $\angle Q'QR$ is one-third of $\angle PQR$.

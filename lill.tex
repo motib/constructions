@@ -30,7 +30,7 @@ starting from the origin, first along the positive direciton of the $x$-axis and
 \coordinate (D) at (-10,6);
 \coordinate (E) at (-10,0);
 \foreach \x in {A,B,C,D,E}
-  \fill (\x) circle(2pt);
+  \fill (\x) circle(1.5pt);
 \draw[very thick] (A) --
   node[below,xshift=1pt,yshift=-10pt] {$a_3=1$} (B);
 \draw[very thick,name path=bc] (B) -- 
@@ -43,7 +43,7 @@ starting from the origin, first along the positive direciton of the $x$-axis and
 % Draw first segment of second path
 \path[name path=a2] (A) -- +(63.4:4);
 \path [name intersections = {of = a2 and bc, by = {A2}}];
-\fill (A2) circle(2pt) node[above right] {$P$};
+\fill (A2) circle(1.5pt) node[above right] {$P$};
 \draw[very thick,dashed] (A) -- (A2);
 \draw ($(A) + (14pt,0)$)
   arc [start angle=0, end angle = 63.4, radius=14pt];
@@ -54,7 +54,7 @@ starting from the origin, first along the positive direciton of the $x$-axis and
 % Draw second segment of second path
 \path[name path=b2] (A2) -- +(153.4:10);
 \path [name intersections = {of = b2 and cd, by = {B2}}];
-\fill (B2) circle(2pt) node[above left] {$Q$};
+\fill (B2) circle(1.5pt) node[above left] {$Q$};
 \draw[very thick,dashed] (A2) -- (B2);
 \draw[rotate=243.4] (B2) rectangle +(10pt,10pt);
 
@@ -73,7 +73,7 @@ Congratulations! You have found a root of the cubic polynomial $x^3+6x^2+11x+6$.
 \section{Introduction}
 This example demonstrates a method discovered by Eduard Lill in 1867 for graphically finding (or more accurately, verifying) the real roots of any polynomial \cite{bradford, hull-beloch, riaz}. We limit the presentation to cubic polynomials. Lill's method has seen renewed interest because it can be implemented using origami, as we shall see in Chapter~\ref{c.beloch}.
 
-In Sections~\ref{s.multiple}--\ref{s.noroots} we continue the initial example to find additional roots and to show that if an angle $\alpha$ is such that $-\tan\alpha$ is \emph{not} a root, then the construction doesn't work. Section~\ref{s.method} presents the full specification of Lill's method. Special cases of the method are demonstrated by the examples in Sections~\ref{s.negative}--\ref{s.noninteger}. Since Lill's method can find a real root of any cubic polynomial, it can be used to trisect an angle. By computing $\sqrt[3]{2}$ as a root of $x^3-2$, it can double a cube (Section~\ref{s.cube}). Section~\ref{s.proof} gives a proof that Lill's method can find the real roots of any cubic polynomial. The proof for arbitrary polynomials is similar.
+In Sections~\ref{s.multiple}--\ref{s.noroots} we continue the initial example to find additional roots and to show that if an angle $\alpha$ is such that $(-\tan\alpha)$ is \emph{not} a root, then the construction doesn't work. Section~\ref{s.method} presents the full specification of Lill's method. Special cases of the method are demonstrated by the examples in Sections~\ref{s.negative}--\ref{s.noninteger}. Since Lill's method can find a real root of any cubic polynomial, it can be used to trisect an angle. By computing $\sqrt[3]{2}$ as a root of $x^3-2$, it can double a cube (Section~\ref{s.cube}). Section~\ref{s.proof} gives a proof that Lill's method can find the real roots of any cubic polynomial. The proof for arbitrary polynomials is similar.
 
 %\newpage
 
@@ -81,7 +81,7 @@ In Sections~\ref{s.multiple}--\ref{s.noroots} we continue the initial example to
 
 Let us continue the example above. The polynomial $p(x)=a_3x^3+6x^2+11x+6$ has three roots $-1,-2,-3$. Computing the arc tangent of the negation of the roots gives:
 \[
-\alpha=-\tan^{-1} -1 = 45^\circ,\quad \beta=-\tan^{-1}-2 = 63.4^\circ,\quad \gamma=-\tan^{-1} -3= 71.6^\circ\,.
+\alpha=-\tan^{-1} (-1) = 45^\circ,\quad \beta=-\tan^{-1}(-2) = 63.4^\circ,\quad \gamma=-\tan^{-1} (-3)= 71.6^\circ\,.
 \]
 In the diagram below we see that for each of the three angles, the second path intersects the end of the first path.
 \begin{center}
@@ -100,7 +100,7 @@ In the diagram below we see that for each of the three angles, the second path i
 \coordinate (D) at (-10,6);
 \coordinate (E) at (-10,0);
 \foreach \x in {A,B,C,D,E}
-  \fill (\x) circle(2pt);
+  \fill (\x) circle(1.5pt);
 \draw[very thick] (A) --
   node[below,yshift=-5pt] {$1$} (B);
 \draw[very thick,name path=bc] (B) -- 
@@ -115,7 +115,7 @@ In the diagram below we see that for each of the three angles, the second path i
 % Draw first segment of first second path
 \path[name path=a1] (A) -- +(45:3);
 \path [name intersections = {of = a1 and bc, by = {A1}}];
-\fill (A1) circle(2pt) node[above right] {$P_1$};
+\fill (A1) circle(1.5pt) node[above right] {$P_1$};
 \draw[very thick,dashed] (A) -- (A1);
 \draw[thick] ($(A) + (16pt,0)$)
   arc [start angle=0, end angle = 45, radius=16pt];
@@ -126,7 +126,7 @@ In the diagram below we see that for each of the three angles, the second path i
 % Draw second segment of first second path
 \path[name path=b1] (A1) -- +(135:8);
 \path [name intersections = {of = b1 and cd, by = {B1}}];
-\fill (B1) circle(2pt) node[above right] {$Q_1$};
+\fill (B1) circle(1.5pt) node[above right] {$Q_1$};
 \draw[very thick,dashed] (A1) -- (B1);
 \draw[rotate=225] (B1) rectangle +(10pt,10pt);
 
@@ -136,7 +136,7 @@ In the diagram below we see that for each of the three angles, the second path i
 % Draw first segment of second second path
 \path[name path=a2] (A) -- +(63.4:4);
 \path [name intersections = {of = a2 and bc, by = {A2}}];
-\fill (A2) circle(2pt) node[above right] {$P_2$};
+\fill (A2) circle(1.5pt) node[above right] {$P_2$};
 \draw[very thick,dashed] (A) -- (A2);
 \draw[thick] ($(A) + (24pt,0)$)
   arc [start angle=0, end angle = 63.4, radius=24pt];
@@ -147,7 +147,7 @@ In the diagram below we see that for each of the three angles, the second path i
 % Draw second segment of second second path%
 \path[name path=b2] (A2) -- +(153.4:10);
 \path [name intersections = {of = b2 and cd, by = {B2}}];
-\fill (B2) circle(2pt) node[above right] {$Q_2$};
+\fill (B2) circle(1.5pt) node[above right] {$Q_2$};
 \draw[very thick,dashed] (A2) -- (B2);
 \draw[rotate=243.4] (B2) rectangle +(10pt,10pt);
 
@@ -157,7 +157,7 @@ In the diagram below we see that for each of the three angles, the second path i
 % Draw first segment of second second path%
 \path[name path=a3] (A) -- +(71.6:4);
 \path [name intersections = {of = a3 and bc, by = {A3}}];
-\fill (A3) circle(2pt) node[above right] {$P_3$};
+\fill (A3) circle(1.5pt) node[above right] {$P_3$};
 \draw[very thick,dashed] (A) -- (A3);
 \draw[thick] ($(A) + (38pt,0)$)
   arc [start angle=0, end angle = 71.6, radius=40pt];
@@ -168,7 +168,7 @@ In the diagram below we see that for each of the three angles, the second path i
 % Draw second segment of second second path%
 \path[name path=b3] (A3) -- +(161.6:10);
 \path [name intersections = {of = b3 and cd, by = {B3}}];
-\fill (B3) circle(2pt) node[above right] {$Q_3$};
+\fill (B3) circle(1.5pt) node[above right] {$Q_3$};
 \draw[very thick,dashed] (A3) -- (B3);
 \draw[rotate=251.6] (B3) rectangle +(10pt,10pt);
 
@@ -181,7 +181,7 @@ In the diagram below we see that for each of the three angles, the second path i
 
 \section{Paths that do not lead to roots}\label{s.noroots}
 
-Perhaps the second path intersects the end of the first path for \emph{any} initial angle, for example, $56.3^\circ$. In the following diagram, the second path intersects the extension of the line segment for the coefficient $a_0$, but not at $(-10,0)$, the end of the first path. We conclude that $-\tan 56.3=-1.5$ is \emph{not} a root of the equation.
+Perhaps the second path intersects the end of the first path for \emph{any} initial angle, for example, $56.3^\circ$. In the following diagram, the second path intersects the extension of the line segment for the coefficient $a_0$, but not at $(-10,0)$, the end of the first path. We conclude that $-\tan 56.3^\circ =-1.5$ is \emph{not} a root of the equation.
 \begin{center}
 \begin{tikzpicture}[scale=1.15]
 % Draw help lines and axes
@@ -200,7 +200,7 @@ Perhaps the second path intersects the end of the first path for \emph{any} init
 \coordinate (D) at (-10,6);
 \coordinate (E) at (-10,0);
 \foreach \x in {A,B,C,D,E}
-  \fill (\x) circle(2pt);
+  \fill (\x) circle(1.5pt);
 \draw[very thick] (A) --
   node[below,yshift=-5pt] {$1$} (B);
 \draw[very thick,name path=bc] (B) -- 
@@ -214,7 +214,7 @@ Perhaps the second path intersects the end of the first path for \emph{any} init
 % Draw first segment of second path
 \path[name path=a2] (A) -- +(56.3:3);
 \path [name intersections = {of = a2 and bc, by = {A2}}];
-\fill (A2) circle(2pt) node[above right] {$P$};
+\fill (A2) circle(1.5pt) node[above right] {$P$};
 \draw[very thick,dashed] (A) -- (A2);
 \draw ($(A) + (14pt,0)$)
   arc [start angle=0, end angle = 56.3, radius=14pt];
@@ -224,14 +224,14 @@ Perhaps the second path intersects the end of the first path for \emph{any} init
 % Draw second segment of second path
 \path[name path=b2] (A2) -- +(146.3:10);
 \path [name intersections = {of = b2 and cd, by = {B2}}];
-\fill (B2) circle(2pt) node[above right] {$Q$};
+\fill (B2) circle(1.5pt) node[above right] {$Q$};
 \draw[very thick,dashed] (A2) -- (B2);
 \draw[rotate=236.3] (B2) rectangle +(10pt,10pt);
 
 % Draw third segment of second path
 \path[name path=c2] (B2) -- +(236.3:8.5);
 \path [name intersections = {of = c2 and de, by = {C2}}];
-\fill (C2) circle(2pt);
+\fill (C2) circle(1.5pt);
 \draw[very thick,dashed] (B2) -- (C2);
 \end{tikzpicture}
 \end{center}
@@ -249,7 +249,7 @@ Examining the examples below will help understand the details.
 \end{itemize}
 \item Construct the second path as follows:
 \begin{itemize}
-\item We use $a_i$ to denote the side of length $a_i$.
+\item We use the symbol for a coefficient $a_i$ to also denote the corresponding side of the first path.
 \item Construct a line from $O$ at an angle of $\theta$ with the positive $x$-axis that intersects $a_2$ at point $P$.
 \item Turn $\pm 90^\circ$ and construct a line from $P$ that intersects $a_1$ at $Q$.
 \item Turn $\pm 90^\circ$ and construct a line from $Q$ that intersects $a_0$ at $R$.
@@ -262,7 +262,7 @@ Examining the examples below will help understand the details.
 \end{itemize}
 \item Notes:
 \begin{itemize}
-\item ``Intersects $a_i$'' includes ``intersects the line segment $a_i$ or any extension of it'' or ``intersects the line that contains the line segment $a_i$''.
+\item ``Intersects $a_i$'' means ``intersects the line that contains the line segment $a_i$''.
 \item When building the second path, choose to turn left or right by $90^\circ$ so that there is an intersection with the next segment of the first path.
 \end{itemize}
 \end{itemize}
@@ -271,7 +271,7 @@ Examining the examples below will help understand the details.
 
 \section{Negative coefficients}\label{s.negative}
 
-Section~\ref{s.ax6} gave an example of the use of Axiom~6 which resulted in the polynomial $p(x)=x^3-3x^2-3x+1$ that has negative coefficients.
+Section~\ref{s.ax6} gave an example of the use of Axiom~6 that resulted in the polynomial $p(x)=x^3-3x^2-3x+1$ with negative coefficients.
 
 We start by drawing a segment of length $1$ to the right. Next we turn $90^\circ$ to face up, but the coefficient is negative, so we draw a segment of length $3$ \emph{down}. After turning $90^\circ$ to the left, the coefficient is again negative, so we draw a segment of length $3$ to the right. Finally, we turn down and draw a segment of length $1$.
 
@@ -281,7 +281,7 @@ Since $-\tan 45^\circ=-1$, a real root of the polynomial is $-1$:
 \[
 p(-1)=(-1)^3-3(-1)^2-3(-1)+6=0\,.
 \]
-The loosely dashed lines in the Figure will be discussed  in Section~\ref{s.noninteger}.
+The loosely dashed lines in the diagram will be discussed  in Section~\ref{s.noninteger}.
 
 \begin{center}
 \begin{tikzpicture}[scale=1.1]
@@ -356,7 +356,7 @@ We conclude that there are three real roots:
 \]
 Check:
 \[
-(x+1)(x+2)(x-3)=(x^2+3x+2)(x-3) =x^3-7x-6\,.
+(x+1)(x+2)(x-3)=x^3-7x-6\,.
 \]
 
 \begin{center}
@@ -418,7 +418,7 @@ Check:
 
 \section{Non-integer roots}\label{s.noninteger}
 
-Consider the polynomial $p(x)=x^3-2x+1$. The first segment if from $(0,0)$ to $(1,0)$ and turns up. The coefficient of $x^2$ is zero so no segment is drawn and turns left. The next coefficient is negative so the segment it goes backwards from $(1,0)$ to $(3,0)$ and turns right. Finally, a segment is drawn from $(3,0)$ to $(3,-1)$. Clearly, $1$ is a root of $p(x)$. Since $-\tan^{-1} -45^\circ=-1$, there is a path $\overline{OP_1Q_1A}$.
+Consider the polynomial $p(x)=x^3-2x+1$. The first segment is from $(0,0)$ to $(1,0)$ and turns up. The coefficient of $x^2$ is zero so no segment is drawn and turns left. The next coefficient is negative so the segment it goes backwards from $(1,0)$ to $(3,0)$ and turns right. Finally, a segment is drawn from $(3,0)$ to $(3,-1)$. Clearly, $1$ is a root of $p(x)$ and since $-\tan^{-1} (-45^\circ)=1$, there is a path $\overline{OP_1Q_1A}$.
 
  If we divide $p(x)$ by $x-1$, we obtain the quadratic polynomial $x^2+x-1$ whose roots are $\frac{-1\pm\sqrt{5}}{2} \approx 0.62,\; -1.62$.
 %\[
@@ -574,7 +574,8 @@ $\sqrt[3]{2}$ is a root of the cubic polynomial $x^3-2$. In the first path, we t
 We limit ourselves to monic cubic polynomials $p(x)=x^3+a_2x^2+a_1x+a_0$.\footnote{If the polynomial is not monic, divide it by $a_3$ and the resulting monic polynomial has the same roots.} In the diagram below, segments of the first path are labeled with coefficients and with $b_2,b_1,a_2-b_2,a_1-b_1$.
 
 Since the sum of the angles of a triangle is $180^\circ$, in a right triangle if one acute angle is $\theta$, the other is $90^\circ-\theta$. Therefore, the angle above $P$ and the angle to the left of $Q$ are equal to $\theta$. We now derive a sequence of formulas for $\tan \theta$:
-\begin{form}{1.5}
+\vspace{-2ex}
+\begin{form}{1.1}
 \tan \theta &=& \disfrac{b_2}{1}=b_2\\
 %a_2-b_2&=&a_2-\tan\theta\\
 \tan \theta &=& \disfrac{b_1}{a_2-b_2}=\disfrac{b_1}{a_2-\tan\theta}\\
@@ -582,7 +583,8 @@ b_1&=&\tan\theta (a_2-\tan\theta)\\
 \tan \theta &=& \disfrac{a_0}{a_1-b_1}=\disfrac{a_0}{a_1-\tan\theta(a_2-\tan\theta)}\,.
 \end{form}
 Simplifying the last equation gives:
-\begin{form}{1.2}
+\vspace{-2ex}
+\begin{form}{1}
 (\tan\theta)^3-a_2(\tan\theta)^2+a_1(\tan\theta)-a_0&=&0\\
 -(\tan\theta)^3+a_2(\tan\theta)^2-a_1(\tan\theta)+a_0&=&0\\
 (-\tan\theta)^3+a_2(-\tan\theta)^2+a_1(-\tan\theta)+a_0&=&0\,.

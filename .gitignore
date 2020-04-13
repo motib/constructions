@@ -1,5 +1,4 @@
 ﻿tikz/*
-*.pdf
 *.bat
 *.zip
 *~
@@ -10,3 +9,4 @@
 *.blg
 *.synctex.gz
 *.toc
+urls.txt

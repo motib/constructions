@@ -7,7 +7,10 @@
 
 Margharita P. Beloch discovered a remarkable connection between origami and Lill's method for finding roots of polynomials \cite{hull-beloch}. She found that one application of the operation of origami Axiom~6 (Section~\ref{s.ax6}) applied to the first path of Lill's method can obtain a real root of any cubic polynomial. The operation is often called the \emph{Beloch fold}.
 
-Consider the polynomial $p(x)=x^3+6x^2+11x+6$ (Section~\ref{s.magic}). In the following diagram we have emphasized the second path and renamed some vertices. To solve the equation we perform a Beloch fold to simultaneously place the points $P',Q'$ on the line segments of lengths $a_2,a_1$, respectively. Unfortunately, if you perform the fold, the path does not solve the equation: $Q'$ is way off to the right, so the angles at $P'$ and $Q'$ are not right angles.
+Consider the polynomial $p(x)=x^3+6x^2+11x+6$ (Section~\ref{s.magic}). In the following diagram we have emphasized the second path and renamed some vertices. To solve the equation we perform a Beloch fold to simultaneously place the points $P,Q$ at $P',Q'$ on the line segments of lengths $a_2,a_1$, respectively. Unfortunately, if you perform the fold, the path does not solve the equation: $Q'$ is way off to the right, so the angles at $P'$ and $Q'$ are not right angles.
+
+\bigskip
+
 \begin{center}
 \begin{tikzpicture}[scale=.8]
 % Draw help lines and axes
@@ -40,14 +43,14 @@ Consider the polynomial $p(x)=x^3+6x^2+11x+6$ (Section~\ref{s.magic}). In the fo
 % Draw first segment of second path
 \path[name path=a2] (A) -- +(63.4:4);
 \path [name intersections = {of = a2 and bc, by = {A2}}];
-\fill (A2) circle(2pt) node[above right] {$P'$};
+\fill (A2) circle(2pt) node[above right] {$P' ?$};
 \draw[ultra thick,dotted] (A) -- (A2);
 \draw[rotate=153.4] (A2) rectangle +(10pt,10pt);
 
 % Draw second segment of second path
 \path[name path=b2] (A2) -- +(153.4:10);
 \path [name intersections = {of = b2 and cd, by = {B2}}];
-\fill (B2) circle(2pt) node[above left]  {$Q'$};
+\fill (B2) circle(2pt) node[above left]  {$Q' ?$};
 \draw[ultra thick,dotted] (A2) -- (B2);
 \draw[rotate=243.4] (B2) rectangle +(10pt,10pt);
 
@@ -58,7 +61,7 @@ Consider the polynomial $p(x)=x^3+6x^2+11x+6$ (Section~\ref{s.magic}). In the fo
 
 \newpage
 
-Recall that a fold is the perpendicular bisector of the line segment between any point and its reflection around the fold. We want $\overline{P'Q'}$ to be a fold so that it will be perpendicular to both $\overline{QQ'}$ and $\overline{PP'}$. If $\overline{P'Q'}$ is the perpendicular bisector of $\overline{QQ'}$ and $\overline{PP'}$, then $P',Q'$, the reflections of $P,Q$, must be the same distance away from the fold as $P$ and $Q$, respectively. With some change of notation we have the following diagram.
+Recall that a fold is the perpendicular bisector of the line segment between any point and its reflection around the fold. We want $\overline{P'?Q'?}$ to be a fold so that it will be perpendicular to both $\overline{QQ'}$ and $\overline{PP'}$. The fold is the perpendicular bisector of $\overline{QQ'}$ and $\overline{PP'}$, so $P',Q'$, the reflections of $P,Q$, must be the same distance away from the fold as $P$ and $Q$, respectively. With some change of notation we have the following diagram.
 
 \begin{center}
 \begin{tikzpicture}[scale=.8]
@@ -99,7 +102,7 @@ Recall that a fold is the perpendicular bisector of the line segment between any
 \path[name path=a2] (A) -- +(63.4:4);
 \path [name intersections = {of = a2 and bc, by = {A2}}];
 \draw[ultra thick,dotted] (A) -- (A2);
-\fill (A2) circle(2pt) node[above right,xshift=4pt] {$R$};
+\fill (A2) circle(2pt) node[below right] {$R$};
 \draw[rotate=153.4] (A2) rectangle +(10pt,10pt);
 
 % Draw second segment of second path

@@ -3,13 +3,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Doubling a Cube}\label{c.cube}
 
-
 \section{Messer's doubling of a cube}\label{s.cube1}
 
-This construction is based on \cite{newton,hwa}.
+To double a cube we need to construct  $\sqrt[3]{2}$. This construction is based on \cite{newton,hwa}.
 
-
-A cube of volume $V$ has sides of length $\sqrt[3]{V}$. The volume of a cube with twice the volume is $2\cdot V$, so we need to construct the length $\sqrt[3]{2\cdot V}=\sqrt[3]{2}\cdot \sqrt[3]{V}$. If we can construct $\sqrt[3]{2}$, we can multiply by the given length $\sqrt[3]{V}$ to double the cube.
 
 \subsection{Dividing a length into thirds}
 
@@ -64,14 +61,15 @@ First, fold the square in half to locate the point $J=(1,1/2)$. Next, draw the l
 \end{tikzpicture}
 \end{center}
 
-The coordinates of their point of intersection $K$ is obtained by solving the two equations:
-\begin{form}{1.8}
+The coordinates of their point of intersection $K$ are obtained by solving the two equations:
+\vspace{-2ex}
+\begin{form}{1.1}
 y&=&1-x\\
 y&=&\disfrac{1}{2}x\,.
 \end{form}
 The result is $x=2/3, y=1/3$.
 
-Construct the line $\overline{EF}$ perpendicular to $\overline{AB}$ that goes $K$, and construct the reflection $\overline{GH}$ of $\overline{BC}$ around $\overline{EF}$. The side of the square has now been divided into thirds.
+Construct the line $\overline{EF}$ perpendicular to $\overline{AB}$ through $K$, and construct the reflection $\overline{GH}$ of $\overline{BC}$ around $\overline{EF}$. The side of the square has been divided into thirds.
 
 \subsection{Building $\sqrt[3]{2}$}
 
@@ -82,10 +80,10 @@ Construct the line $\overline{EF}$ perpendicular to $\overline{AB}$ that goes $K
 \coordinate (B) at (0,0);
 \coordinate (C) at (12,0);
 \coordinate (D) at (12,12);
-\fill (A) circle (2pt) node[left]  {$A$};
-\fill (B) circle (2pt) node[left]  {$B$};
-\fill (C) circle (2pt) node[right] {$C$};
-\fill (D) circle (2pt) node[right] {$D$};
+\fill (A) circle (1.5pt) node[left]  {$A$};
+\fill (B) circle (1.5pt) node[left]  {$B$};
+\fill (C) circle (1.5pt) node[right] {$C$};
+\fill (D) circle (1.5pt) node[right] {$D$};
 \draw (B) rectangle +(12pt,12pt);
 \draw[rotate=90] (C) rectangle +(12pt,12pt);
 \draw [thick] (A)  -- (B) -- (C) -- (D) -- cycle;
@@ -93,26 +91,26 @@ Construct the line $\overline{EF}$ perpendicular to $\overline{AB}$ that goes $K
 % Draw line one-third from botton
 \coordinate (E)  at (0,4);
 \coordinate (F) at (12,4);
-\fill (E) circle (2pt) node[left] {$E$};
-\fill (F) circle (2pt) node[right] {$F$};
+\fill (E) circle (1.5pt) node[left] {$E$};
+\fill (F) circle (1.5pt) node[right] {$F$};
 \draw [very thick,dotted,name path=ef] (E) -- (F);
 
 % Draw line two-thirds from bottom
 \coordinate (G)  at (0,8);
 \coordinate (H) at (12,8);
-\fill (G) circle (2pt) node[left] {$G$};
-\fill (H) circle (2pt) node[right] {$H$};
+\fill (G) circle (1.5pt) node[left] {$G$};
+\fill (H) circle (1.5pt) node[right] {$H$};
 \draw[rotate=-90] (G) rectangle +(12pt,12pt);
 \draw [very thick,dotted] (G) -- (H);
 
 % Draw reflections of C and F
 \coordinate (CP) at (0,5.31);
 \coordinate (FP) at (2.96,8);
-\fill (CP) circle (2pt)
+\fill (CP) circle (1.5pt)
   node[left] {$C'$}
   node[above right,yshift=8pt] {$\alpha$}
   node[below right,xshift=-2pt,yshift=-12pt] {$\alpha'$};
-\fill (FP) circle (2pt)
+\fill (FP) circle (1.5pt)
   node[above] {$F'$}
   node[below left,xshift=-8pt] {$\alpha'$};
 \draw[rotate=-50] (CP) rectangle +(12pt,12pt);
@@ -122,7 +120,7 @@ Construct the line $\overline{EF}$ perpendicular to $\overline{AB}$ that goes $K
 % Tangent is y = 2.26x - 10.9
 % Crosses x axis at (4.83,0)
 \coordinate (J) at (4.83,0);
-\fill (J) circle (2pt)
+\fill (J) circle (1.5pt)
     node[below] {$J$}
     node[above left,xshift=-8pt] {$\alpha$};
 \draw [very thick,dashed,name path=jd] (J) -- node[very near end,left] {$l$} (10,12);
@@ -162,8 +160,9 @@ a-\disfrac{a+1}{3}=\disfrac{2a-1}{3}\,.\label{eq.one-third}
 \end{equation}
 Finally, since $\angle FCJ$ is a right angle, so is $\angle F'C'J$.
 
-$\triangle C'BJ$ is a right triangle so by Pythagoras's theorem:
-\begin{form}{1.3}
+$\triangle C'BJ$ is a right triangle so by Pythagoras' theorem:
+\vspace{-2ex}
+\begin{form}{1.1}
 1^2 + b^2 &=& ((a+1)-b)^2\\
 %&=& a^2+2a+1 - 2(a+1)b + b^2\\
 a^2+2a - 2(a+1)b&=&0\\
@@ -172,20 +171,22 @@ b&=&\disfrac{a^2+2a}{2(a+1)}\,.
 
 $\angle GC'F' + \angle F'C'J + \angle JC'B = 180^\circ$ since they form the straight line $\overline{GB}$. Denote $\angle GC'F'$ by $\alpha$.
 \[
-\angle JC'B=180^\circ - \angle F'C'J - \angle GC'F'= 180^\circ - 90^\circ - \angle GC'F' = 90^\circ-\angle GC'F = 90^\circ -\alpha\,,
+\angle JC'B=180^\circ - \angle F'C'J - \angle GC'F'= 180^\circ - 90^\circ - \alpha=90^\circ -\alpha\,,
 \]
 which we denote by $\alpha'$. The triangles $\triangle C'BJ$, $\triangle F'GC'$ are right triangles, so $\angle C'JB=\alpha$ and $\angle C'F'G=\alpha'$. Therefore, the triangles are similar and using Equation~\ref{eq.one-third} we have:
 \[
 \disfrac{b}{(a+1)-b}=\disfrac{\disfrac{2a-1}{3}}{\disfrac{a+1}{3}}\,.
 \]
 Substituting for $b$:
-\begin{form}{2}
+\vspace{-2ex}
+\begin{form}{1.8}
 \disfrac{\disfrac{a^2+2a}{2(a+1)}}{(a+1)-\disfrac{a^2+2a}{2(a+1)}}&=&\disfrac{2a-1}{a+1}\\
 %\disfrac{a^2+2a}{(a+1)\cdot 2(a+1)-(a^2+2a)}&=&\disfrac{2a-1}{a+1}\\
 \disfrac{a^2+2a}{a^2+2a +2}&=&\disfrac{2a-1}{a+1}\,.
 %a^3+3a^2+2a&=&(2a-1)(a^2+2a+2)\,.
 %&=&2a^3+3a^2+2a-2\,.
 \end{form}
+
 Simplifying results in $a^3=2$ and $a=\sqrt[3]{2}$.
 
 
@@ -206,13 +207,13 @@ Place point $A$ at $(-1,0)$ and point $B$ at $(0,-2)$. Let $p$ be the line with 
 \coordinate (O) at (0,0);
 \coordinate (A) at (-2,0);
 \coordinate (B) at (0,-4);
-\fill (O) circle (2pt)
+\fill (O) circle (1.5pt)
   node[below left,xshift=-7pt] {$O$}
   node[below left,yshift=-12pt] {$(0,0)$};
-\fill (A) circle (2pt)
+\fill (A) circle (1.5pt)
   node[above left,xshift=-7pt] {$A$}
   node[below left,xshift=2pt,yshift=0pt] {$(-1,0)$};
-\fill (B) circle (2pt)
+\fill (B) circle (1.5pt)
   node[left,xshift=-12pt] {$B$}
   node[left,yshift=-12pt] {$(0,-2)$};
 
@@ -224,17 +225,17 @@ Place point $A$ at $(-1,0)$ and point $B$ at $(0,-2)$. Let $p$ be the line with 
 \draw[very thick] (-5,4) -- node[very near start, above,xshift=-16pt] {$q\!: y=2$} +(12,0);
 
 \coordinate (AP) at (2,5);
-\fill (AP) circle (2pt) node[above right] {$A'$};
+\fill (AP) circle (1.5pt) node[above right] {$A'$};
 \coordinate (BP) at (6.34,4);
-\fill (BP) circle (2pt) node[above right] {$B'$};
+\fill (BP) circle (1.5pt) node[above right] {$B'$};
 
 % Tangent y = -0.8x + 1.26
 
 % Exchanged X and Y 
 \coordinate (X) at (0,2.52);
 \coordinate (Y) at (3.15,0);
-\fill (X) circle (2pt) node[right,xshift=4pt,yshift=2pt] {$Y$};
-\fill (Y) circle (2pt) node[above right,xshift=10pt] {$X$};
+\fill (X) circle (1.5pt) node[right,xshift=4pt,yshift=2pt] {$Y$};
+\fill (Y) circle (1.5pt) node[above right,xshift=10pt] {$X$};
 \draw [very thick,dashed] ($(X)!-1.1!(Y)$) -- node[very near end,right,xshift=8pt] {$l$} ($(X)!2!(Y)$);
 
 \draw [very thick,dotted] (A) -- (AP);
@@ -256,16 +257,16 @@ Place point $A$ at $(-1,0)$ and point $B$ at $(0,-2)$. Let $p$ be the line with 
 Let us extract a simplified diagram:
 
 \begin{center}
-\begin{tikzpicture}[scale=1]
+\begin{tikzpicture}[scale=.9]
 \coordinate (O) at (0,0);
 \coordinate (A) at (-2,0);
 \coordinate (B) at (0,-4);
-\fill (O) circle (2pt)
+\fill (O) circle (1.5pt)
   node[below left,xshift=-7pt] {$O$};
-\fill (A) circle (2pt)
+\fill (A) circle (1.5pt)
   node[above left,xshift=-7pt] {$A$}
   node[above right,xshift=10pt] {$\alpha$};
-\fill (B) circle (2pt)
+\fill (B) circle (1.5pt)
   node[left,xshift=-12pt] {$B$}
   node[above right,yshift=12pt] {$\alpha'$};
 
@@ -273,22 +274,22 @@ Let us extract a simplified diagram:
 \draw[thick] (-3,0)   -- +(8,0);
 
 \coordinate (AP) at (2,5);
-\fill (AP) circle (2pt) node[above right] {$A'$};
+\fill (AP) circle (1.5pt) node[above right] {$A'$};
 \coordinate (BP) at (6.34,4);
-\fill (BP) circle (2pt) node[above right] {$B'$};
+\fill (BP) circle (1.5pt) node[above right] {$B'$};
 
 % Tangent y = -0.8x + 1.26
 
 % Exchanged X and Y 
 \coordinate (X) at (0,2.52);
 \coordinate (Y) at (3.15,0);
-\fill (X) circle (2pt)
+\fill (X) circle (1.5pt)
   node[right,xshift=4pt,yshift=2pt] {$Y$}
   node[below right,yshift=-14pt] {$\alpha$}
   node[below left,xshift=2pt,yshift=-12pt] {$\alpha'$};
-\fill (Y) circle (2pt)
+\fill (Y) circle (1.5pt)
   node[above right,xshift=10pt] {$X$}
-  node[below left,xshift=-10pt] {$\alpha$}
+  node[below left,xshift=-13pt,yshift=-2pt] {$\alpha$}
   node[above left,xshift=-15pt] {$\alpha'$};
 \draw [very thick,dashed] ($(X)!-.4!(Y)$) -- ($(X)!1.2!(Y)$);
 
@@ -297,7 +298,7 @@ Let us extract a simplified diagram:
 
 \draw (0,0) rectangle +(10pt,10pt);
 \draw[rotate=-130] (X) rectangle +(10pt,10pt);
-\draw[rotate=-130] (Y) rectangle +(10pt,10pt);
+\draw[rotate=145] (Y) rectangle +(10pt,10pt);
 
 \end{tikzpicture}
 \end{center}
@@ -305,9 +306,12 @@ Let us extract a simplified diagram:
 The fold is the perpendicular bisector of $\overline{AA'}$ and $\overline{BB'}$. Therefore, $\angle AYX$ and $\angle YXB$ are right angles and $\overline{AA'}$ is parallel to $\overline{BB'}$. By alternate interior angles $\angle YAO =\angle BXO=\alpha$. If an acute angle in a right triangle is $\alpha$, the other acute angle must be $90^\circ - \alpha$, which we denote $\alpha'$. The labeling of the angles in all the triangles in the diagram follows immediately.
 
 We have three similar triangles $\triangle AOY\sim \triangle YOX \sim \triangle XOB$. $\overline{OA}=1$, $\overline{OB}=2$ are given, so:
-\begin{form}{2}
+\vspace{-2ex}
+\begin{form}{1.4}
 \disfrac{\overline{OY}}{\overline{OA}}=\disfrac{\overline{OX}}{\overline{OY}}=\disfrac{\overline{OB}}{\overline{OX}}\\
-\disfrac{\overline{OY}}{1}=\disfrac{\overline{OX}}{\overline{OY}}=\disfrac{2}{\overline{OX}}\\
+\disfrac{\overline{OY}}{1}=\disfrac{\overline{OX}}{\overline{OY}}\\
+\overline{OY}^2=\overline{OX}\\
+\disfrac{\overline{OY}}{1}=\disfrac{2}{\overline{OX}}\\
 \overline{OY}^2=\overline{OX}=\disfrac{2}{\overline{OY}}\;,
 \end{form}
 resulting in $\overline{OY}^3=2$ and $\overline{OY}=\sqrt[3]{2}$.
