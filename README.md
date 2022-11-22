@@ -4,6 +4,8 @@ This repository contains the LaTeX source for this document which is available o
 
 Copyright 2020 by Moti Ben-Ari under the  Creative Commons Attribution-ShareAlike 3.0 Unported License.
 
+This document is superseded by my open access book [Mathematical Surprises](https://link.springer.com/book/10.1007/978-3-031-13566-8).
+
 Geometric constructions are fundamental to Euclidean geometry and appear in secondary-school textbooks. Most students of mathematics will also know the three problems posed by the Greeks---trisecting angle, squaring a circle and doubling a cube---for which a construction is impossible. There are many interesting and surprising geometrical constructions that are probably unknown to almost all students and teachers. This document presents these constructions in great detail using only secondary-school mathematics.
 
 Contents:
